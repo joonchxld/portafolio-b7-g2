@@ -12,11 +12,22 @@ selector {
     align-items: center;
 }
 
-#proyecto-1 {
-    background-image: url('google.png');
+.proyecto {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+#proyecto-1 {
+    background-image: url('google.png');
+}
+
+#proyecto-2 {
+    background-image: url('souls.png');
+}
+
+#proyecto-3 {
+    background-image: url('pag-borrador.png');
 }
 
 .text-shadow-1 {
