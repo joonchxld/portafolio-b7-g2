@@ -21,6 +21,11 @@
 
 <body>
 
+    <!-- El botón para pausar está en el main. -->
+    <audio id="miAudio" autoplay>
+        <source src="assets/theme-of-laura.mp3" type="audio/mpeg">
+    </audio>
+
     <header>
         <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container">
@@ -44,23 +49,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contacto">Contacto</a>
                         </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Otra cosa
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                        <!-- Botón para pausar canción. -->
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <button id="pauseButton">Pausar</button>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -91,7 +82,7 @@
                         gustan. Estoy totalmente dispuesta a adquirir más conocimientos.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contáctame</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">jkarlamut@gmail.com</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="copiarAlPortapapeles('jkarlamut@gmail.com')">jkarlamut@gmail.com</button>
                     </div>
                 </div>
             </div>

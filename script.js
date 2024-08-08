@@ -34,3 +34,48 @@ typewriterFrase
     .pauseFor(300)
     .deleteAll()
     .start();
+
+
+// PARA PONER MÚSICA
+let audioElement; // Variable para almacenar el objeto Audio
+const mainElement = document.querySelector('main'); // Seleccionar la etiqueta <main>
+mainElement.addEventListener('click', function () {
+    if (!audioElement) {
+        audioElement = new Audio('assets/theme-of-laura.mp3');
+        audioElement.volume = 0.1;
+    }
+    audioElement.play();
+});
+const pauseButton = document.getElementById('pauseButton');
+
+pauseButton.addEventListener('click', function () {
+    if (audioElement.paused) {
+        audioElement.play();
+        pauseButton.textContent = "Pausar";
+    } else {
+        audioElement.pause();
+        pauseButton.textContent = "Reanudar";
+    }
+});
+
+
+/*
+async function copiarAlPortapapeles(texto) {
+    try {
+        await navigator.clipboard.writeText(texto);
+        console.log('Texto copiado al portapapeles:', texto);
+    } catch (err) {
+        console.error('Error al copiar:', err);
+    }
+}
+*/
+
+// Copiar al portapapeles.
+async function copiarAlPortapapeles(texto) {
+    try {
+        await navigator.clipboard.writeText(texto);
+        alert('Texto copiado al portapeles.');
+    } catch (err) {
+        console.error('Error al copiar: ', err);
+    }
+}
